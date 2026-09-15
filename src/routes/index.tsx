@@ -36,7 +36,7 @@ const NAV = [
    Each string in MOVIE_STORE_DESCRIPTION renders as its own paragraph.
 ------------------------------------------------------------------- */
 const GT_MOVIES = {
-  demoUrl: "/CS2340Proj1Demo.mp4",
+  demoUrl: `${import.meta.env.BASE_URL}CS2340Proj1Demo.mp4`,
   description: [
     "This GT Movies Store is a web application designed to showcase and demonstrate the capabilities of the Georgia Tech Movies Store project. It is built using Django, Python, SQLite, and HTML/CSS. Each screen satisfies a user story depending on what they want. For example, there is an About page that describes what the app is about, and there are features for the review system such as deleting, adding, and editing, which are features that users wanted. ",
     "While working on this project, I mainly referenced the textbook for guidance. Otherwise, I reference StackOverflow for some extra support for debugging. My approach was just to follow the book, and if something went wrong I would look for any spacing issues, and if it was deeper than that, I would consult StackOverflow.",
@@ -175,20 +175,20 @@ const SKILLS = [
 
 const PROCESS = [
   {
-    title: "Read the stories first",
-    body: "I started from the user stories rather than the screens, turning each one into a checklist item with a clear definition of done. That settled the data model before any templates were written.",
+    title: "",
+    body: "",
   },
   {
-    title: "Build in thin vertical slices",
-    body: "Each slice went model → view → template → manual test, so the app stayed runnable at every step and a broken piece was never more than one change away from the last good state.",
+    title: "",
+    body: "",
   },
   {
-    title: "Version control as a diary",
-    body: "Small, single-purpose commits with messages tied to the story they closed, so a regression could be traced back to the exact change responsible.",
+    title: "",
+    body: "",
   },
   {
-    title: "Working through doubts",
-    body: "When stuck, I reproduced the problem in the smallest possible case and read the framework documentation before searching for answers. Larger design questions I sketched both ways, then picked the option that needed the least special-casing.",
+    title: "",
+    body: ".",
   },
 ];
 
