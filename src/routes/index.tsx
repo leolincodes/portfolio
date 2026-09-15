@@ -252,18 +252,6 @@ function TimelineItem({
   );
 }
 
-function CodeLink({ href, label = "View code" }: { href: string; label?: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="rounded-md border border-gold/40 px-4 py-2 font-display text-xs tracking-[0.12em] text-gold uppercase transition-colors hover:bg-accent"
-    >
-      {label}
-    </a>
-  );
-}
 
 function Index() {
   return (
@@ -368,7 +356,6 @@ function Index() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <CodeLink href={GT_MOVIES.codeUrl} />
                 <a
                   href={GT_MOVIES.demoUrl}
                   target="_blank"
@@ -424,9 +411,6 @@ function Index() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 pt-1">
-                  <CodeLink href={p.codeUrl} />
-                </div>
               </article>
             ))}
           </div>
