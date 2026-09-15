@@ -37,7 +37,6 @@ const NAV = [
 ------------------------------------------------------------------- */
 const GT_MOVIES = {
   demoUrl: "#",
-  codeUrl: "#",
   description: [
     "Add your GT Movies Store description here. Elaborate on the web app you designed and developed, and describe how the different screens and features respond to the required user stories.",
     "This block takes as many paragraphs as you need — replace this placeholder text with your own and the typography and spacing stay the same.",
@@ -104,7 +103,6 @@ const PROJECTS = [
   {
     name: "Real-Time Traffic Ingestion Analytics Pipeline",
     stack: ["Go", "Python", "Redis", "AWS", "Docker", "Terraform"],
-    codeUrl: "#",
     points: [
       "Built a two-tier microservice system in Go/Python to handle incoming streams from simulated traffic cameras.",
       "Reduced API latency to under 5ms with a Redis queue, keeping the web gateway asynchronously responsive.",
@@ -114,7 +112,6 @@ const PROJECTS = [
   {
     name: "Platform For Freshmen and Transfers",
     stack: ["Next.js", "Tailwind CSS", "Node.js", "Postgres"],
-    codeUrl: "#",
     points: [
       "Built a web app that helps freshmen and transfer students socialize by hobbies and interests.",
       "Used WebSockets for direct messages between users and REST APIs to handle signups and logins.",
@@ -124,7 +121,6 @@ const PROJECTS = [
   {
     name: "Facial Skincare Routine Analytics",
     stack: ["Firebase", "React", "Next.js", "Google Cloud", "Postgres"],
-    codeUrl: "#",
     points: [
       "Engineered an application that provides a routine and diagnosis of skin condition from an image or video.",
       "Developed a FastAPI and PyTorch pipeline trained on 35,000+ images using cross-validation.",
@@ -134,7 +130,6 @@ const PROJECTS = [
   {
     name: "Predictive Heart Attack Detection ML Pipeline",
     stack: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Jupyter"],
-    codeUrl: "#",
     points: [
       "Engineered an end-to-end ML pipeline to parse and preprocess 5,000+ patient records, standardizing data with Pandas.",
       "Evaluated and benchmarked tradeoffs across multiple classification models to reach 93.12% accuracy.",
