@@ -4,17 +4,17 @@ import heroImg from "@/assets/hero-noir.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Leo Lin — Web Developer Portfolio & GT Movies Store" },
+      { title: "Leo Lin — Software Engineer | Resume & Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Leo Lin: an introduction, a deep dive into the GT Movies Store web app, the process behind it, and a demo video.",
+          "Software engineer resume and portfolio: skills, experience, education, and the GT Movies Store project with a demo video.",
       },
-      { property: "og:title", content: "Leo Lin — Web Developer Portfolio & GT Movies Store" },
+      { property: "og:title", content: "Leo Lin — Software Engineer | Resume & Portfolio" },
       {
         property: "og:description",
         content:
-          "An introduction, the GT Movies Store case study, my process, and a demo video of the app in action.",
+          "Software engineer resume and portfolio: skills, experience, education, and the GT Movies Store project with a demo video.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,70 +25,79 @@ export const Route = createFileRoute("/")({
 
 const NAV = [
   { href: "#about", label: "About" },
-  { href: "#project", label: "GT Movies Store" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
   { href: "#process", label: "Process" },
-  { href: "#demo", label: "Demo" },
 ];
 
-const SCREENS = [
+/* Replace this with your real demo link. */
+const DEMO_URL = "#";
+
+/* Paste your GT Movies Store write-up here — each string is a paragraph. */
+const MOVIE_STORE_DESCRIPTION = [
+  "Add your GT Movies Store description here. Elaborate on the web app you designed and developed, and describe how the different screens and features respond to the required user stories.",
+  "This block takes as many paragraphs as you need — replace this placeholder text with your own and it will keep the same typography and spacing.",
+];
+
+const SKILLS = [
+  { group: "Languages", items: ["Python", "JavaScript", "TypeScript", "SQL", "HTML", "CSS"] },
+  { group: "Frameworks", items: ["Django", "React", "Node.js", "Tailwind CSS"] },
+  { group: "Data", items: ["PostgreSQL", "SQLite", "Database design", "REST APIs"] },
+  { group: "Tooling", items: ["Git & GitHub", "VS Code", "Docker", "Unit testing"] },
+  { group: "Practices", items: ["User stories", "Code review", "Agile increments", "Debugging"] },
+];
+
+const EXPERIENCE = [
   {
-    n: "01",
-    name: "Home & Movie Catalogue",
-    story: "As a visitor, I want to browse the movies on offer so I can see what is available.",
-    body: "A grid of movie cards — poster, title, price — served straight from the database. A search field filters the catalogue by title, so the same template handles both browsing and searching without a second page.",
+    period: "2025 — Present",
+    role: "Software Engineering Intern",
+    org: "Company name",
+    points: [
+      "Add a bullet describing what you built and the impact it had.",
+      "Add a bullet naming the stack you worked in and what you owned.",
+      "Add a bullet about collaboration, code review, or testing.",
+    ],
   },
   {
-    n: "02",
-    name: "Movie Detail & Reviews",
-    story: "As a signed-in user, I want to leave, edit and delete my own review of a movie.",
-    body: "Each movie has its own page with the full description and every review below it. The review form only appears when you are signed in, and edit/delete controls only render on reviews you wrote.",
+    period: "2024 — 2025",
+    role: "Freelance Web Developer",
+    org: "Self-employed",
+    points: [
+      "Add a bullet about a client project and the problem it solved.",
+      "Add a bullet about the technologies you chose and why.",
+    ],
   },
+];
+
+const EDUCATION = [
   {
-    n: "03",
-    name: "Cart & Order Flow",
-    story: "As a shopper, I want to add movies to a cart and place an order.",
-    body: "Adding to the cart stores quantities against the session, the cart page recalculates the running total on every change, and checkout writes an Order plus its Items so the history survives sign-out.",
-  },
-  {
-    n: "04",
-    name: "Accounts & Orders",
-    story: "As a returning user, I want to sign in and see what I ordered before.",
-    body: "Sign up, log in, log out and an Orders page listing past purchases newest-first. Protected pages redirect anonymous visitors to the login screen instead of failing silently.",
-  },
-  {
-    n: "05",
-    name: "Petitions",
-    story: "As a fan, I want to petition for a movie and vote on other people's petitions.",
-    body: "Users open a petition for a title the store does not carry and vote once each. Vote counts update on the list so the most-wanted titles rise to the top.",
-  },
-  {
-    n: "06",
-    name: "Responsive Layout",
-    story: "As a user on a phone, I want the store to stay usable.",
-    body: "One shared base template with a collapsing navigation bar. The catalogue reflows from four columns to one, and touch targets stay large enough on small screens.",
+    period: "2023 — 2027",
+    role: "BSc Computer Science",
+    org: "University name",
+    points: [
+      "Relevant coursework: web development, databases, software engineering.",
+      "Add honours, GPA, or notable coursework here.",
+    ],
   },
 ];
 
 const PROCESS = [
   {
-    n: "01",
     title: "Read the stories first",
-    body: "I started from the user stories rather than the screens, turning each one into a checklist item with a clear definition of done. That decided the data model before I wrote any templates.",
+    body: "I started from the user stories rather than the screens, turning each one into a checklist item with a clear definition of done. That decided the data model before any templates were written.",
   },
   {
-    n: "02",
     title: "Build in thin vertical slices",
-    body: "Each slice went model → view → template → manual test, so the app was runnable at every step. Working in small increments meant a broken piece was never more than one change away from the last good state.",
+    body: "Each slice went model → view → template → manual test, so the app stayed runnable at every step and a broken piece was never more than one change away from the last good state.",
   },
   {
-    n: "03",
     title: "Version control as a diary",
-    body: "Small, single-purpose commits with messages tied to the story they closed. When something regressed I could read back through history and find the exact change responsible.",
+    body: "Small, single-purpose commits with messages tied to the story they closed, so a regression could be traced back to the exact change responsible.",
   },
   {
-    n: "04",
     title: "Working through doubts",
-    body: "When I got stuck, I reproduced the problem in the smallest possible case, read the framework documentation before searching for answers, and checked my reading against the error trace. Bigger design questions — where cart state should live, how to guard owner-only actions — I sketched both options out and picked the one that needed the least special-casing.",
+    body: "When stuck, I reproduced the problem in the smallest possible case and read the framework documentation before searching for answers. Larger design questions I sketched both ways, then picked the option that needed the least special-casing.",
   },
 ];
 
@@ -104,25 +113,55 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="border-t border-border/60 px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-6xl">
+    <section id={id} className="scroll-mt-20 border-t border-border/60 px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-5xl">
         <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-4 max-w-3xl text-3xl leading-[1.1] font-semibold md:text-5xl">{title}</h2>
-        <div className="mt-12">{children}</div>
+        <h2 className="mt-3 text-2xl font-semibold md:text-4xl">{title}</h2>
+        <div className="mt-10">{children}</div>
       </div>
     </section>
+  );
+}
+
+function TimelineItem({
+  period,
+  role,
+  org,
+  points,
+}: {
+  period: string;
+  role: string;
+  org: string;
+  points: string[];
+}) {
+  return (
+    <li className="grid gap-3 border-l border-border/60 pb-10 pl-6 last:pb-0 md:grid-cols-[10rem_1fr] md:gap-8">
+      <p className="font-display text-xs tracking-[0.16em] text-gold uppercase md:pt-1">{period}</p>
+      <div>
+        <h3 className="text-lg font-semibold">{role}</h3>
+        <p className="mt-1 text-sm text-gold-soft">{org}</p>
+        <ul className="mt-4 space-y-2">
+          {points.map((p) => (
+            <li key={p} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+              <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-gold/70" />
+              {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
   );
 }
 
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/85 backdrop-blur">
+        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <a href="#top" className="font-display text-sm font-semibold tracking-[0.2em] uppercase">
             Leo <span className="text-gold">Lin</span>
           </a>
-          <nav className="hidden gap-8 md:flex">
+          <nav className="hidden gap-7 md:flex">
             {NAV.map((item) => (
               <a
                 key={item.href}
@@ -137,182 +176,156 @@ function Index() {
       </header>
 
       <main id="top">
-        {/* Hero */}
-        <section className="relative flex min-h-screen items-end overflow-hidden">
+        {/* Résumé header */}
+        <section className="relative overflow-hidden border-b border-border/60">
           <img
             src={heroImg}
-            alt="Gold spotlight falling across a dark cinema curtain"
+            alt=""
             width={1920}
             height={1088}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover opacity-40"
           />
           <div className="veil absolute inset-0" />
-          <div className="relative mx-auto w-full max-w-6xl px-6 pt-32 pb-24">
-            <p className="eyebrow">Personal web portfolio</p>
-            <h1 className="mt-6 max-w-4xl text-5xl leading-[0.95] font-semibold md:text-7xl lg:text-8xl">
-              I build web apps that
-              <br />
-              <span className="text-gradient-gold">earn their applause.</span>
+          <div className="relative mx-auto max-w-5xl px-6 pt-32 pb-16 md:pt-40 md:pb-20">
+            <p className="eyebrow">Software Engineer</p>
+            <h1 className="mt-4 text-4xl font-semibold md:text-6xl">
+              Leo <span className="text-gradient-gold">Lin</span>
             </h1>
-            <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-              Full-stack developer and computing student. Most recently: GT Movies Store, a movie
-              store built end to end from a set of user stories.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Full-stack software engineer building web applications from the data model up. Most
+              recently GT Movies Store — a movie store designed, developed and tested end to end from
+              a set of user stories.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#project"
-                className="rounded-md bg-primary px-6 py-3 font-display text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                See GT Movies Store
-              </a>
-              <a
-                href="#demo"
-                className="rounded-md border border-gold/50 px-6 py-3 font-display text-sm font-medium text-gold transition-colors hover:bg-accent"
-              >
-                Watch the demo
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* About */}
-        <Section id="about" eyebrow="01 — Who I am" title="An introduction">
-          <div className="grid gap-12 md:grid-cols-[1.4fr_1fr]">
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                I am a computing student who ended up in web development the long way round: I liked
-                taking things apart, and the web is the one place where you can take something apart
-                and put it back together in the same afternoon.
-              </p>
-              <p>
-                What I care about is the part of the work most people never see — the data model that
-                stops being awkward once you name it properly, the guard that keeps a user from
-                editing someone else's review, the page that still works on a five-inch screen. I
-                would rather ship four screens that behave correctly than twelve that only look
-                finished.
-              </p>
-              <p>
-                Away from a terminal I watch far too many films, which is probably why a movie store
-                was the project I enjoyed most.
-              </p>
-            </div>
-            <dl className="panel h-fit divide-y divide-border/60 p-6">
+            <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
               {[
-                ["Focus", "Full-stack web development"],
-                ["Backend", "Python, Django, SQL"],
-                ["Frontend", "HTML, CSS, JavaScript"],
-                ["Tools", "Git, GitHub, VS Code"],
-                ["Approach", "User stories, thin vertical slices"],
+                ["Location", "Your city"],
+                ["Email", "you@example.com"],
+                ["GitHub", "github.com/yourhandle"],
+                ["LinkedIn", "linkedin.com/in/yourhandle"],
               ].map(([k, v]) => (
-                <div key={k} className="flex flex-col gap-1 py-4 first:pt-0 last:pb-0">
+                <div key={k}>
                   <dt className="eyebrow">{k}</dt>
-                  <dd className="text-sm text-foreground">{v}</dd>
+                  <dd className="mt-1 text-foreground">{v}</dd>
                 </div>
               ))}
             </dl>
           </div>
+        </section>
+
+        {/* About */}
+        <Section id="about" eyebrow="01" title="About me">
+          <div className="max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p>
+              I am a software engineer who cares most about the part of the work people never see —
+              the data model that stops being awkward once it is named properly, the guard that keeps
+              a user from editing someone else's record, the page that still behaves on a small
+              screen.
+            </p>
+            <p>
+              I work from user stories, ship in thin vertical slices, and treat a readable commit
+              history as part of the deliverable. I would rather ship four screens that behave
+              correctly than twelve that only look finished.
+            </p>
+          </div>
         </Section>
 
-        {/* Project */}
-        <Section
-          id="project"
-          eyebrow="02 — Case study"
-          title="GT Movies Store — a movie store designed, built and tested end to end"
-        >
-          <div className="grid gap-12 md:grid-cols-[1.4fr_1fr]">
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                GT Movies Store is a web application where visitors browse a catalogue of films, read
-                and write reviews, collect titles in a cart, place an order and petition for movies
-                the store does not stock yet. It is a Django project: models for movies, reviews,
-                orders and petitions, class- and function-based views over them, and templates that
-                all extend one base layout.
-              </p>
-              <p>
-                Every screen exists to answer a specific user story, and each one below names the
-                story it serves and how the interface responds to it.
-              </p>
-            </div>
-            <div className="panel p-6">
-              <p className="eyebrow">At a glance</p>
-              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li>Catalogue browsing and title search</li>
-                <li>Accounts with sign up, sign in, sign out</li>
-                <li>Owner-only review editing and deletion</li>
-                <li>Session cart with running totals</li>
-                <li>Order history per user</li>
-                <li>Petitions with one vote per person</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 grid gap-px overflow-hidden rounded-lg border border-border/60 bg-border/60 md:grid-cols-2">
-            {SCREENS.map((s) => (
-              <article key={s.n} className="bg-card p-8">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-display text-3xl font-semibold text-gold/40">{s.n}</span>
-                  <h3 className="text-xl font-semibold">{s.name}</h3>
-                </div>
-                <p className="mt-5 border-l-2 border-gold/60 pl-4 text-sm italic text-gold-soft">
-                  {s.story}
-                </p>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-              </article>
+        {/* Skills */}
+        <Section id="skills" eyebrow="02" title="Skills">
+          <dl className="grid gap-px overflow-hidden rounded-lg border border-border/60 bg-border/60 md:grid-cols-2">
+            {SKILLS.map((s) => (
+              <div key={s.group} className="bg-card p-6">
+                <dt className="eyebrow">{s.group}</dt>
+                <dd className="mt-3 flex flex-wrap gap-2">
+                  {s.items.map((i) => (
+                    <span
+                      key={i}
+                      className="rounded-sm border border-gold/25 bg-secondary px-2.5 py-1 text-xs text-gold-soft"
+                    >
+                      {i}
+                    </span>
+                  ))}
+                </dd>
+              </div>
             ))}
-          </div>
+          </dl>
+        </Section>
+
+        {/* Experience */}
+        <Section id="experience" eyebrow="03" title="Experience">
+          <ul>
+            {EXPERIENCE.map((e) => (
+              <TimelineItem key={e.role} {...e} />
+            ))}
+          </ul>
+          <h3 className="mt-16 font-display text-xl font-semibold">Education</h3>
+          <ul className="mt-8">
+            {EDUCATION.map((e) => (
+              <TimelineItem key={e.role} {...e} />
+            ))}
+          </ul>
+        </Section>
+
+        {/* Projects */}
+        <Section id="projects" eyebrow="04" title="Projects">
+          <article className="panel p-8 md:p-10">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 className="text-2xl font-semibold md:text-3xl">GT Movies Store</h3>
+                <p className="mt-2 text-sm text-gold-soft">
+                  Full-stack web application — Django, Python, SQL, HTML/CSS
+                </p>
+              </div>
+              <a
+                href={DEMO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-md bg-primary px-5 py-2.5 font-display text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Watch the demo
+              </a>
+            </div>
+
+            <div className="rule-gold my-8 opacity-40" />
+
+            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+              {MOVIE_STORE_DESCRIPTION.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+
+            <p className="mt-8 text-sm text-muted-foreground">
+              Demo video:{" "}
+              <a href={DEMO_URL} target="_blank" rel="noreferrer" className="text-gold underline">
+                add your link here
+              </a>
+            </p>
+          </article>
         </Section>
 
         {/* Process */}
-        <Section
-          id="process"
-          eyebrow="03 — Process"
-          title="How I worked on it, and how I got unstuck"
-        >
-          <ol className="space-y-px overflow-hidden rounded-lg border border-border/60 bg-border/60">
-            {PROCESS.map((p) => (
-              <li key={p.n} className="bg-card p-8 md:flex md:gap-10">
-                <div className="flex items-baseline gap-4 md:w-72 md:shrink-0">
-                  <span className="font-display text-2xl font-semibold text-gold/40">{p.n}</span>
+        <Section id="process" eyebrow="05" title="Process">
+          <ol className="grid gap-px overflow-hidden rounded-lg border border-border/60 bg-border/60 md:grid-cols-2">
+            {PROCESS.map((p, i) => (
+              <li key={p.title} className="bg-card p-7">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-gold/40">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                   <h3 className="text-lg font-semibold">{p.title}</h3>
                 </div>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground md:mt-0">
-                  {p.body}
-                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
               </li>
             ))}
           </ol>
         </Section>
-
-        {/* Demo */}
-        <Section id="demo" eyebrow="04 — Video demonstration" title="GT Movies Store in motion">
-          <div className="panel overflow-hidden">
-            <div className="aspect-video w-full bg-secondary">
-              <div className="flex h-full flex-col items-center justify-center gap-4 px-6 text-center">
-                <span className="flex size-16 items-center justify-center rounded-full border border-gold/50">
-                  <span className="ml-1 block size-0 border-y-[9px] border-l-[14px] border-y-transparent border-l-gold" />
-                </span>
-                <p className="font-display text-lg font-semibold">Demo video goes here</p>
-                <p className="max-w-md text-sm text-muted-foreground">
-                  Send me the link to your walkthrough recording and I will embed the player in this
-                  frame.
-                </p>
-              </div>
-            </div>
-          </div>
-          <p className="mt-6 max-w-2xl text-base text-muted-foreground">
-            The walkthrough covers a full pass through the app: browsing and searching the catalogue,
-            creating an account, writing and then editing a review, filling the cart, checking out,
-            reviewing the order history, and opening and voting on a petition.
-          </p>
-        </Section>
       </main>
 
-      <footer className="border-t border-border/60 px-6 py-12">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <footer className="border-t border-border/60 px-6 py-10">
+        <div className="mx-auto flex max-w-5xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="font-display text-sm tracking-[0.2em] uppercase">
             Leo <span className="text-gold">Lin</span>
           </p>
-          <p className="text-sm text-muted-foreground">Personal web portfolio — GT Movies Store</p>
+          <p className="text-sm text-muted-foreground">Software engineer — resume & portfolio</p>
         </div>
       </footer>
     </div>
