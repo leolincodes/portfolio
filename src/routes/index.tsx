@@ -36,10 +36,10 @@ const NAV = [
    Each string in MOVIE_STORE_DESCRIPTION renders as its own paragraph.
 ------------------------------------------------------------------- */
 const GT_MOVIES = {
-  demoUrl: "#",
+  demoUrl: "/CS2340Proj1Demo.mp4",
   description: [
-    "Add your GT Movies Store description here. Elaborate on the web app you designed and developed, and describe how the different screens and features respond to the required user stories.",
-    "This block takes as many paragraphs as you need — replace this placeholder text with your own and the typography and spacing stay the same.",
+    "This GT Movies Store is a web application designed to showcase and demonstrate the capabilities of the Georgia Tech Movies Store project. It is built using Django, Python, SQLite, and HTML/CSS. Each screen satisfies a user story depending on what they want. For example, there is an About page that describes what the app is about, and there are features for the review system such as deleting, adding, and editing, which are features that users wanted. ",
+    "While working on this project, I mainly referenced the textbook for guidance. Otherwise, I reference StackOverflow for some extra support for debugging. My approach was just to follow the book, and if something went wrong I would look for any spacing issues, and if it was deeper than that, I would consult StackOverflow.",
   ],
 };
 
@@ -370,17 +370,19 @@ function Index() {
               ))}
             </div>
 
-            <p className="mt-8 text-sm text-muted-foreground">
-              Demo video:{" "}
-              <a
-                href={GT_MOVIES.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-gold underline"
+            <div className="mt-8">
+              <p className="mb-3 text-sm text-muted-foreground">
+                Project Demo
+              </p>
+
+              <video
+                controls
+                className="w-full rounded-lg border border-border/60"
               >
-                add your link here
-              </a>
-            </p>
+                <source src={GT_MOVIES.demoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </article>
 
           {/* Other projects */}

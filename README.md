@@ -1,6 +1,5 @@
 # Showcase Your Best
 
-make me a portfolio that looks good and can accomplish this
 
 This project was built with [Lovable](https://lovable.dev).
 
