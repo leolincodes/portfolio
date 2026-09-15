@@ -40,6 +40,7 @@ const GT_MOVIES = {
   description: [
     "This GT Movies Store is a web application designed to showcase and demonstrate the capabilities of the Georgia Tech Movies Store project. It is built using Django, Python, SQLite, and HTML/CSS. Each screen satisfies a user story depending on what they want. For example, there is an About page that describes what the app is about, and there are features for the review system such as deleting, adding, and editing, which are features that users wanted. ",
     "While working on this project, I mainly referenced the textbook for guidance. Otherwise, I reference StackOverflow for some extra support for debugging. My approach was just to follow the book, and if something went wrong I would look for any spacing issues, and if it was deeper than that, I would consult StackOverflow.",
+    "URL to the website: https://llin360.pythonanywhere.com/"
   ],
 };
 
